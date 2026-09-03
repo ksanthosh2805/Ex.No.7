@@ -1,171 +1,283 @@
-# Exno.7-Develop a prompt-based application tailored to their personal needs, fostering creativity and practical problem-solving skills while leveraging the capabilities of large language models.
-
+# Ex.No.7 – Develop a Prompt-Based Application Tailored to Personal Needs
+# Date: 03-09-2026
+# Name: Santhosh K
+# Register No.: 212223100050
+# AIM
+To develop a prompt-based application using Large Language Models for personalized career planning, resume improvement, interview preparation, skill-gap identification, and career development through effective prompt engineering.
+# AI TOOLS REQUIRED
+•	ChatGPT – Prompt design, career planning, resume assistance, and interview practice.
+•	Google Gemini – Alternative prompt testing and comparison.
+•	Microsoft Copilot – Content generation and summarization.
+•	Web Browser – To access AI tools and test prompts.
+# EXPLANATION
+The proposed application is an AI Career and Interview Preparation Assistant. It uses Large Language Models (LLMs) to understand a student's educational background, skills, interests, career goals, experience, and areas requiring improvement.
+The application demonstrates how a simple prompt can be progressively improved by adding context, constraints, priorities, output formats, and personalization.
+# MAIN FEATURES
+•	Career-role suggestion
+•	Skill-gap identification
+•	Personalized learning plan
+•	Resume improvement
+•	Interview-question generation
+•	Interview answer practice
+•	Strength and weakness analysis
+•	Progress-based preparation
+•	Personalized career guidance
+# PROCEDURE
+## Step 1 – Define the Application Requirements
+The application should be able to:
+•	Accept the student's educational background.
+•	Accept technical and soft skills.
+•	Identify the student's career interests.
+•	Suggest suitable career roles.
+•	Identify missing or weak skills.
+•	Create a personalized skill-development plan.
+•	Improve resume content.
+•	Generate interview questions.
+•	Provide feedback on interview answers.
+•	Modify the preparation plan based on progress.
+## Step 2 – Simple Prompt
+Start with a basic prompt.
+##Prompt 1
+Suggest some career options for a computer science student.
+Example Output
+Career Options
+1.	Software Developer
+2.	Data Analyst
+3.	Web Developer
+4.	Cyber Security Analyst
+5.	Cloud Engineer
+6.	Database Administrator
+Description
+The simple prompt produces general career suggestions. However, it does not consider the student's interests, current skills, academic background, strengths, or career preferences.
+Therefore, additional context is required to generate a more useful and personalized response.
+## Step 3 – Improved Prompt
+Provide more information about the student.
+Prompt 2
+Suggest suitable career options for a computer science student who has basic knowledge of Java, SQL, Python and computer networks.
+The student enjoys programming and problem-solving but is not very confident in advanced mathematics.
+Suggest five suitable career roles and briefly explain why each role may be appropriate.
+## Example Output
 ```
-Name : Santosh K
-Reg No : 212223100050
+Career Role	Reason
+Software Developer	Uses programming and problem-solving skills
+Backend Developer	Suitable for students interested in programming and databases
+Database Developer	Makes use of SQL and database knowledge
+Web Developer	Combines programming with practical application development
+Cyber Security Analyst	Uses networking and computing knowledge
 ```
-# Aim: 
-To develop a prompt-based application using ChatGPT - To demonstrate how to create a prompt-based application to organize daily tasks, showing the progression from simple to more advanced prompt designs and their corresponding outputs.
-
-# Explanation: 
-Prompt:
-"Design a personal productivity assistant that can help manage daily tasks, schedule reminders, suggest wellness tips, and answer general queries. The assistant should interact using natural language and be adaptable to the user’s changing preferences over time."
-### Procedure:
-1. Define the core requirements of a personal productivity assistant.
-2. Identify and construct appropriate prompts for each task using an LLM (e.g., ChatGPT).
-3. Simulate natural user interaction through a simple interface or command-line system.
-4. Collect feedback or inputs from users and adapt responses accordingly.
-5. (Optional) Integrate basic memory to simulate preference adaptation.
-EXPECTED OUTPUT: - (attached the drive link)
-Output (Example Response by LLM):
-Personal Productivity Assistant Features:
-1. Daily Task Manager:
-o Accept tasks via natural language (e.g., "Remind me to call mom at 6 PM").
-o Organize tasks by priority and deadline.
-o Provide daily summaries and pending items.
-2. Smart Scheduler:
-o Schedule events and set reminders using contextual understanding.
-o Notify user of overlapping appointments or free time slots.
-3. Wellness Tips Generator:
-o Suggest daily wellness advice (hydration, exercise, screen-time breaks).
-o Adapt suggestions based on past user preferences and responses.
-
-# Title:
-
-Designing a Personal Productivity Assistant Using Natural Language Interaction
-
-# Objective:
-
-To design and simulate a Personal Productivity Assistant (PPA) that manages daily tasks, schedules reminders, suggests wellness tips, answers general queries, and adapts to user preferences using an LLM such as ChatGPT.
-
-# Core requirements:
-
-| Feature                          | Description                                                                                                                            |
-| -------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| **Task Management**              | Accept tasks via natural language (e.g., “Remind me to call mom at 6 PM”), support deadlines, priorities, and provide daily summaries. |
-| **Smart Scheduler**              | Schedule meetings/events, detect conflicts, and suggest alternative time slots.                                                        |
-| **Wellness Tips Generator**      | Suggest hydration, posture, and breathing exercises based on context and prior responses.                                              |
-| **General Query Answering**      | Respond to simple factual or contextual questions naturally.                                                                           |
-| **Personalization & Adaptation** | Store preferences (tone, work hours) and learn from user interactions (e.g., frequent snoozes).                                        |
-| **Natural Language Interface**   | Understand everyday language and respond conversationally.                                                                             |
-| **Memory Simulation**            | Retain user settings and adapt responses accordingly over time.                                                                        |
-
-# System Design Overview:
-
-## Architecture
-
-Input Module – Accepts natural-language commands.
-
-Intent Parser – Classifies input into intents: Task, Schedule, Wellness, Preference, Query.
-
-Action Handler – Executes intent logic and updates memory.
-
-Memory Store – Maintains user preferences, snooze stats, and task list.
-
-Response Generator (LLM) – Produces natural conversational replies.
-
-Feedback Loop – Updates user model when preferences change.
-
-# Prompt Templates Used with LLM:
-
-| Task               | Prompt Template                                                                                                         |
-| ------------------ | ----------------------------------------------------------------------------------------------------------------------- |
-| **System Prompt**  | “You are a helpful Personal Productivity Assistant. Be concise and friendly.”                                           |
-| **Add Task**       | `User: "{user_text}"`<br>`Assistant: Extract task title, due date/time, priority, and create a JSON task object.`       |
-| **Schedule Event** | `User: "{user_text}"`<br>`Assistant: Parse event title, proposed time, detect conflicts, and suggest alternatives.`     |
-| **Wellness Tip**   | `User context: {context}`<br>`Assistant: Suggest a short wellness tip and one action button (e.g., Start/Snooze).`      |
-| **General Query**  | `User question: "{user_text}"`<br>`Assistant: Provide a short helpful answer and, if relevant, a follow-up suggestion.` |
-
-# Simulation Procedure:
-
-## Input Handling:
-The system receives user inputs such as:
-
-“Remind me to call Saro at 6 PM”
-
-“I’m feeling stressed”
-
-“Set work hours 10:00–18:00”
-
-## Intent Classification:
-Based on keywords and structure, the system decides if it’s a task, event, wellness query, etc.
-
-## Response Generation:
-The assistant forms natural responses using templates and stored preferences.
-
-## Preference Adaptation:
-
-Updates tone (“Use concise tone”)
-
-Adjusts working hours
-
-Records snooze or tip acceptance rates
-
-## Output Simulation:
-The final transcript and memory data are generated and stored.
-
-# Output:
-
-## Task Manager
+## Description
+The improved prompt provides information about the student's technical skills, interests, and limitations.
+As a result, the AI produces career recommendations that are more relevant than the general suggestions generated by the simple prompt.
+## Step 4 – Advanced Prompt
+Now provide detailed context, priorities, constraints, and an expected output format.
+Prompt 3
 ```
-User: Remind me to call Saro at 6 PM  
-Assistant: Got it — I added "Call Saro" to your tasks. Due today at 6:00 PM. Would you like a reminder before it's due? (Yes/No)
+Act as an AI Career Planning Assistant.
+Create a 30-day career preparation plan for a final-year Computer Science student who wants to become a Software Developer.
+Student Profile
+•	Programming: Intermediate Java
+•	Python: Basic
+•	SQL: Intermediate
+•	Data Structures: Basic
+•	Computer Networks: Basic
+•	Communication Skills: Moderate
+•	Problem-Solving: Moderate
+•	Resume: Needs improvement
+•	Interview Experience: Very limited
+Requirements
+•	Focus more on Java and Data Structures.
+•	Include daily coding practice.
+•	Include SQL revision twice per week.
+•	Include communication practice.
+•	Include resume improvement activities.
+•	Include technical interview preparation.
+•	Include mock interviews during the final week.
+•	Keep the daily workload manageable.
+•	Present the result as a table containing day, activity, topic, and duration.
 ```
 
-## Smart Scheduler
+## Example Output
 ```
-User: Schedule meeting with Sanjay tomorrow at 3 PM  
-Assistant: Scheduled "Meeting with Sanjay" at 3 PM for 1 hour.
+Day	Activity	Topic	Duration
+Day 1	Technical Study	Java OOP	1.5 hrs
+Day 2	Coding Practice	Arrays	1 hr
+Day 3	Technical Study	SQL Queries	1 hr
+Day 4	Coding Practice	Strings	1 hr
+Day 5	Communication	Self Introduction	30 min
+Day 6	Technical Study	Linked Lists	1.5 hrs
+Day 7	Revision	Java + SQL	1 hr
+Day 8	Coding Practice	Searching	1 hr
+Day 9	Technical Study	Inheritance & Polymorphism	1 hr
+Day 10	Resume	Resume Improvement	1 hr
+Day 11	Coding Practice	Sorting	1 hr
+Day 12	Interview Preparation	Java Questions	1 hr
+Day 13	Technical Study	Collections	1.5 hrs
+Day 14	Revision	Week 2 Revision	1 hr
+Day 15	Coding Practice	Problem Solving	1 hr
+Day 16	SQL Practice	Joins & Subqueries	1 hr
+Day 17	Communication	HR Questions	45 min
+Day 18	Technical Study	Exception Handling	1 hr
+Day 19	Coding Practice	Stack & Queue	1 hr
+Day 20	Resume	Project Description	1 hr
+Day 21	Revision	Technical Revision	1 hr
+Day 22	Interview Preparation	DSA Questions	1.5 hrs
+Day 23	Coding Practice	Mixed Problems	1 hr
+Day 24	Communication	Interview Speaking Practice	45 min
+Day 25	Technical Study	Java Revision	1 hr
+Day 26	Interview Preparation	HR + Technical Questions	1 hr
+Day 27	Mock Interview	Technical Interview	1 hr
+Day 28	Mock Interview	HR Interview	1 hr
+Day 29	Error Analysis	Identify Weak Areas	1 hr
+Day 30	Final Preparation	Revision + Interview Practice	1.5 hrs
 ```
-
-## Wellness Suggestion
+## Description
+The advanced prompt provides detailed information about the student's skills, weaknesses, career goal, priorities, constraints, and required output format.
+The AI can therefore create a structured and personalized career-development plan rather than providing generic advice.
+## Step 5 – Adaptive Prompt
+The application can modify the preparation plan based on the student's progress.
+Prompt 4
+Update my career preparation plan based on my current progress.
+I have completed:
+•	Java: 75%
+•	SQL: 80%
+•	Data Structures: 40%
+•	Communication Skills: 60%
+•	Resume: 90%
+•	Interview Practice: 30%
+I find Data Structures difficult and I have a technical interview in 10 days.
+Increase Data Structures practice, maintain Java and SQL revision, increase interview practice, and reduce time spent on resume preparation.
+Create a new 10-day preparation schedule.
+Example Output
+## Updated 10-Day Preparation Plan
 ```
-User: I'm feeling anxiety 
-Assistant: Try a 2-minute guided breathing exercise. Shall I start a session now? (Start/Snooze)
-
+Day	Main Focus	Activity
+Day 1	Data Structures	Arrays + Searching
+Day 2	Interview	Java Technical Questions
+Day 3	Data Structures	Linked Lists
+Day 4	Interview	DSA Questions
+Day 5	Data Structures	Stack + Queue
+Day 6	Communication	HR Interview Practice
+Day 7	Data Structures	Trees
+Day 8	Interview	Mock Technical Interview
+Day 9	Weak Areas	Error Analysis + Revision
+Day 10	Final Preparation	Mock Interview + Revision
 ```
-
-## Preference Update
+Description
+The adaptive prompt allows the AI to modify the preparation plan based on the student's progress.
+More time is allocated to Data Structures and interview practice because they have lower completion levels and are important for the upcoming technical interview.
+## Step 6 – Resume Improvement Feature
+The application can also improve a student's resume according to a target career role.
+## Prompt 5
 ```
-User: Set work hours 10:00–18:00  
-Assistant: Work hours updated to 10:00–18:00.
-
+Act as a professional resume reviewer.
+Improve the following project description for a Software Developer resume.
+Original:
+"Created a student management system using Java. It stores student details and allows users to search and update records."
+Rewrite it using professional and concise language.
+Include technical skills and focus on the project's functionality.
 ```
-
-## Adaptive Response
+## Example Output
 ```
-User: Use concise tone  
-Assistant: Got it — I'll keep responses concise.
-
+Student Management System – Java
+Developed a Java-based Student Management System to manage student records efficiently. Implemented functionalities for adding, searching, updating, and maintaining student information using object-oriented programming concepts.
+Description
+This feature demonstrates how prompt-based applications can transform basic information into professional content according to a specific purpose.
+The output can be further customized based on the student's target job role and experience level.
 ```
-
-# Adaptation Mechanism:
-
-Maintains a JSON-based memory with fields like:
+## Step 7 – Interview Question Generator
+## Prompt 6
 ```
-{
-  "preferences": {
-    "preferred_tone": "concise",
-    "work_hours": {"start": "10:00", "end": "18:00"},
-    "snooze_counts": {"stretch": 3}
-  }
-}
+Act as a technical interview trainer.
+Generate 10 interview questions for a beginner-level Software Developer position.
+Include:
+•	4 Java questions
+•	2 SQL questions
+•	2 Data Structures questions
+•	2 HR questions
+Provide a short model answer after each question.
 ```
-If a wellness tip is repeatedly snoozed, the assistant delays its frequency.
+## Example Output
+```
+The AI generates a customized interview set containing:
+Java Questions
+•	What is object-oriented programming?
+•	What is inheritance?
+•	What is method overloading?
+•	What is exception handling?
+SQL Questions
+•	What is a primary key?
+•	What is the difference between WHERE and HAVING?
+Data Structures Questions
+•	What is an array?
+•	What is a stack?
+HR Questions
+•	Tell me about yourself.
+•	Why should we hire you?
+The AI also provides short answers and explanations for each question.
+```
+## Description
+This feature helps students practice interview questions without manually searching for suitable questions.
+The questions can be customized according to the student's skill level, target role, and areas of weakness.
+# APPLICATION WORKFLOW
+```
+Student Input
+      ↓
+Education + Skills + Career Goal
+      ↓
+Prompt Design
+      ↓
+ChatGPT / LLM
+      ↓
+Career Recommendation
+      ↓
+Personalized Preparation Plan
+      ↓
+Student Progress
+      ↓
+Updated Prompt
+      ↓
+Adaptive Career Preparation
+```
+# PROMPT PROGRESSION
+|Prompt Level	|Information Provided|	Output|
+|-------------|--------------------|--------|
+|Simple	|Basic career requirement	|General career suggestions|
+|Improved	|Skills + interests	|Personalized career options|
+|Advanced	|Skills + weaknesses + goals + constraints	|Detailed career preparation plan|
+|||Adaptive	|Progress + interview date	|Updated preparation schedule|
+|Specialized	|Target role + resume content	|Resume improvement|
+|Practice	|Role + difficulty + topics	|Customized interview questions|
+# EXPECTED OUTPUT
+The application is expected to provide:
+•	Personalized career suggestions.
+•	Suitable job-role recommendations.
+•	Skill-gap identification.
+•	Career-development schedules.
+•	Resume improvement.
+•	Interview questions.
+•	Model interview answers.
+•	Communication practice.
+•	Adaptive preparation plans.
+•	Personalized feedback.
+#ADVANTAGES
+•	Saves time in career planning.
+•	Provides personalized career guidance.
+•	Helps identify missing skills.
+Creates structured learning plans.
+•	Generates customized interview questions.
+•	Improves resume content.
+•	Provides continuous practice.
+•	Can adapt according to student progress.
+•	Demonstrates effective prompt engineering.
+# LIMITATIONS
+•	AI-generated career recommendations may not always match real-world job requirements.
+•	Generated information should be verified using reliable sources.
+•	The AI may misunderstand incomplete or ambiguous prompts.
+•	The quality of the output depends on the quality of user input.
+•	AI cannot completely replace professional career counsellors or interviewers.
+•	Job requirements and industry expectations can change over time.
+# RESULT
+A prototype AI Career and Interview Preparation Assistant was successfully developed using prompt-based interaction with a Large Language Model.
+The application demonstrated how simple prompts can be progressively improved by adding context, constraints, priorities, output formats, and personalization.
+It successfully generated career recommendations, personalized preparation schedules, resume improvements, interview questions, and adaptive career-development plans based on the user's requirements.
 
-Tone changes immediately affect all future responses.
-
-# Output Summary:
-
-| Component                   | Example Behavior                                           |
-| --------------------------- | ---------------------------------------------------------- |
-| **Daily Task Manager**      | Creates and lists tasks with due dates.                    |
-| **Smart Scheduler**         | Adds events, detects overlaps, proposes alternate slots.   |
-| **Wellness Tips Generator** | Suggests context-aware health reminders.                   |
-| **Preference Adaptation**   | Learns tone, work hours, and wellness timing.              |
-| **LLM Interaction**         | Natural, conversational replies based on prompt templates. |
-
-
-
-# Result: 
-The lab exercise resulted in the creation of a prototype concept for a personal assistant powered by large language models. 
